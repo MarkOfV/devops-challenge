@@ -6,18 +6,17 @@ phases:
       java: corretto8
   pre_build:
     commands:
-      - echo Initializing environment
-      - export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain nextwork --domain-owner 123456789012 --region us-east-2 --query authorizationToken --output text`
-
+      - echo "Checking connection to the S3 Dependency Warehouse..."
+      - aws s3 ls s3://vladan-dependency-repo
   build:
     commands:
-      - echo Build started on `date`
+      - echo "Assembling the product..."
       - mvn -s settings.xml compile
   post_build:
     commands:
-      - echo Build completed on `date`
+      - echo "Packaging the final product..."
       - mvn -s settings.xml package
 artifacts:
   files:
     - target/nextwork-web-project.war
-  discard-paths: no
+  discard-paths: yes
