@@ -8,14 +8,24 @@ phases:
     commands:
       - echo "Checking connection to the S3 Dependency Warehouse..."
       - aws s3 ls s3://vladan-dependency-repo
+
   build:
     commands:
-      - echo "Assembling the product..."
+      - echo "====== BEGINNING TEST PHASE ======"
+      - echo "Running tests on `date`"
+      - chmod +x run-tests.sh
+      - ./run-tests.sh
+      - echo "====== TEST PHASE COMPLETE ======"
+      - echo "====== BEGINNING BUILD PHASE ======"
+      - echo "Build started on `date`"
       - mvn -s settings.xml compile
+      - echo "====== BUILD PHASE COMPLETE ======"
+
   post_build:
     commands:
       - echo "Packaging the final product..."
       - mvn -s settings.xml package
+      
 artifacts:
   files:
     - target/nextwork-web-project.war
