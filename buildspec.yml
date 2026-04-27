@@ -11,11 +11,11 @@ phases:
   build:
     commands:
       - echo "Assembling the product..."
-      - mvn compile
+      - mvn -s settings.xml compile
   post_build:
     commands:
       - echo "Packaging the final product..."
-      - mvn package
+      - mvn -s settings.xml package
 artifacts:
   files:
     - target/nextwork-web-project.war
