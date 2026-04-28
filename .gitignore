@@ -1,0 +1,30 @@
+# --- Maven / Java ---
+# The build output folder
+target/
+# Compiled class files
+*.class
+# Packaged artifacts
+*.war
+*.ear
+*.jar
+
+# --- Terraform ---
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+*.tfvars
+*.tfvars.json
+.terraform.lock.hcl
+terraform/.terraform/
+
+# --- IDE / OS Specific ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# --- Miscellaneous ---
+.env
+aws_credentials
