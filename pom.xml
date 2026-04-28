@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.nextwork.app</groupId>
-  <artifactId>nextwork-web-project</artifactId>
+  <groupId>com.vladan.devops</groupId>
+  <artifactId>devops-challenge-project</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>nextwork-web-project Maven Webapp</name>
+  <name>devops-challenge-project Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -16,7 +16,7 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>nextwork-web-project</finalName>
+    <finalName>devops-challenge-project</finalName>
     <extensions>
       <extension>
         <groupId>com.github.seahen</groupId>
