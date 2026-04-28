@@ -25,8 +25,8 @@ phases:
     commands:
       - echo "Packaging the final product..."
       - mvn -s settings.xml package
-
+      
 artifacts:
   files:
-    - target/devops-challenge-project.war
+    - target/nextwork-web-project.war
   discard-paths: yes
