@@ -10,7 +10,7 @@ variable "my_ip" {
 
 variable "stack_name" {
   type    = string
-  default = "DeveloperChallengeCodeDeployEC2Stack"
+  default = "DevopsChallengeCodeDeployEC2Stack"
 }
 
 variable "region" {
